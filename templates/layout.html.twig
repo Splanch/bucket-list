@@ -16,13 +16,15 @@
         <h1>Bucket List</h1>
         <nav>
             <ul>
-                <li><a href="{{ path('home') }}">Accueil</a></li>
+                <li><a href="{{ path('home') }}">Home</a></li>
+                <li><a href="{{ path('about') }}" >About Us</a></li>
+                <li><a href="{{ path('list') }}">Ideas</a></li>
             </ul>
         </nav>
     </header>
     <main>{% block main %}{% endblock %}</main>
     <footer>
-        &copy; {{ "now" | date("yy") }} Bucket List
+        &copy; {{ "now" | date("Y") }} Bucket List
        <p> By Fabián Alexis (https://github.com/fabianalexisinostroza/Antu) [<a
                 href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a
                 href="https://commons.wikimedia.org/wiki/File%3AAntu_color-fill.svg">via Wikimedia

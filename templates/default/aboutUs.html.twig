@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+<ul>
+    {% for membre in team %}
+    <li>
+        <img src="{{ membre.picture }}">
+        <p>
+
+            {{ membre.firstname }} {{ membre.lastname }}
+            {% if membre.lastname == 'Potencier' %}
+                &#x1F493;
+            {% endif  %}
+
+            {{ membre.dateOfBirth | date("d-m-Y")}}
+        </p>
+        <p>Creator of {{ membre.creatorOf }}</p>
+    </li>
+        {% endfor  %}
+
+    </ul>
+
+
+{% endblock %}
+
