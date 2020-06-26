@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+{% for idea in ideas %}
+    <div class="idea">
+        <h3><a href="{{ path('idea_detail',{'id':idea.id}) }}">{{ idea.title | lower |capitalize}}</a></h3>
+    </div>
+    {%  endfor %}
+{% endblock %}
+
